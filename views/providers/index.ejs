@@ -1,0 +1,43 @@
+<% include ../partials/header %>
+<div class="container">
+   <header class="jumbotron">
+         <div>
+            <a id="bookIcon" href="#"><img src="http://localhost:3000/images/openbook-lightgrey-133x100.png" height="88px"></a>
+            <h1 id="eduRate">eduRate</h1>
+         </div>
+         <h3> For-Profit Colleges in Southern Africa</h3>
+         <h2>BROWSE | REVIEW | COMMENT</h2> 
+         <br>
+         
+            <p>
+               <a class="btn btn-primary btn-lg"  href="/providers/new">ADD A PROVIDER</a>
+            </p>
+         
+   </header>
+   
+   <div class="row">
+      <div class="col-md-12">
+         <p id="browse">Browse Education Providers below...</p>
+         <br>
+      </div>
+   </div>
+   
+   <div class="row" style="display: flex; flex-wrap: wrap">
+      <% providers.forEach(function(provider){ %>
+      	<div class="col-md-4 col-sm-6">
+            <div class="thumbnail text-center">
+               <a href="/providers/<%= provider._id %>"><img src="<%=provider.image%>"></a>
+      	      <div class="caption">
+                  <!-- <h4><%=provider.name%></h4> -->
+                  <h5><%=provider.descriptor%></h5>
+      	      </div>
+      	         <p>
+				         <a href="/providers/<%= provider._id %>" class="btn btn-xs btn-primary">More...</a>	
+			         </p> 
+            </div>
+      	</div>
+      <% }); %>
+   </div>
+</div>
+
+<% include ../partials/footer %> 

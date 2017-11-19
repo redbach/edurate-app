@@ -1,0 +1,107 @@
+<% include ../partials/header %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="thumbnail">
+				<img class="img-responsive" width="100%" src="<%= provider.image %>">
+				<div class="caption-full"><br>
+					<span><a id="providerName" href="#"><%= provider.name %></a></span>
+					<ul id="avgRating" class="list-inline pull-right">
+						<!-- <span class="" id="score">Score</span> -->
+						<span class="pull-right" id="avgPercentage">54%</span><br>
+						<span class="pull-right" id="numberUsers">201 voters</span>
+					</ul>
+
+					<h4><%= provider.descriptor %></h4>					
+					<p id="providerDescription"><%= provider.description %><p>
+					
+							
+					<% if(currentUser && provider.author.id.equals(currentUser._id)){ %>
+						<p id="addedBy">Added by <%= provider.author.username %> [ timestamp ]</p>
+						<a class="btn btn-warning btn-xs" href="/providers/<%= provider._id %>/edit">EDIT</a>
+						<form class="delete-form" action="/providers/<%= provider._id %>?_method=DELETE" method="POST">
+							<button class="btn btn-danger btn-xs">DELETE</button>
+						</form>
+					<% } %><br>
+				</div> 
+			</div> 	<!--thumbnail-->
+		<div>
+			<a id="addAReviewBlock" href="/providers/<%= provider._id %>/reviews/new">
+				<p id="addAReviewText">Click to ADD A REVIEW</p>
+			</a>
+		</div>
+
+			<div class="well">	
+				<% provider.reviews.forEach(function(review){ %>	
+				<div class="row">									
+						<div class="col-md-12">
+							<h4><span id="reviewTitle"> TITLE FOR REVIEW—MAXIMUM 50 CHARACTERS.</span></h4>
+							<p id="reviewText"><%= review.text %></p>
+							<span id="timestamp">19 Nov 2017</span>
+
+						<ul id="scoreline" class="list-inline">
+							<span id="username"><%= review.author.username %></span>
+							<span id="ratedIt">&nbsp;rated <%= provider.name %>&nbsp;</span>
+							<span id="usersRating">68%.</span>
+						</ul>	
+														
+
+						<!-- <% if(currentUser && review.author.id.equals(currentUser._id)){ %>
+							<a class="btn btn-warning btn-xs" href="/providers/<%=provider._id %>/reviews/<%= review._id %>/edit">EDIT</a>
+
+							<form class="delete-form" action="/providers/<%=provider._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
+								<input type="Submit" class="btn btn-danger btn-xs" value="DELETE">
+							</form>
+						<% } %> -->
+
+							<div id="editDelete">
+								<ul class="list-inline">
+								<% if(currentUser && review.author.id.equals(currentUser._id)){ %>
+									<li><a href="/providers/<%=provider._id %>/reviews/<%= review._id %>/edit">Edit</a></li>
+
+									<form class="delete-form" action="/providers/<%=provider._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
+									<input type="submit" class="" value="Delete">
+								</form>
+
+									<!-- <li><a href="#">Delete</a></li> -->
+								<% } %>
+									<li class="pull-right"><a href="#">Share</a></li>
+									<li class="pull-right"><a href="#">Comment</a></li>
+									<br>
+									<hr>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<% }); %>
+			</div> <!--class="well"-->
+			<p><a id="return"href="/providers">Return to Index of Providers</a></p>
+		</div> <!--col-md-8-->
+
+		<div class="col-md-4">
+				<div class="list-group">
+
+					<div>
+						<li><a href="#" class="list-group-item active">Top Heading</a></li>
+						<a href="http://localhost:3000/images/rihanna-anti.jpg" target="_blank"><img src="http://localhost:3000/images/rihanna-anti-640x256.jpg" width="100%"></a>
+
+					</div>
+
+					<div>
+						<li><a href="#" class="list-group-item">Heading Two</a></li>
+						<a href="http://localhost:3000/images/one-night-in-bangkok-orig.jpg" target="_blank"><img src="http://localhost:3000/images/one-night-in-bangkok-640x256.jpg" width="100%"></a>
+					</div>
+
+					<div>
+						<li><a href="#" class="list-group-item">Heading Three</a></li>
+						<a href="http://localhost:3000/images/david-byrne-rei-momo.jpg" target="_blank"><img src="http://localhost:3000/images/david-byrne-rei-momo-640x256.jpg" width="100%"></a>
+					</div>
+
+
+
+				</div>
+		</div> <!--col-md-4-->
+	</div> <!--row-->
+</div>	<!--container-->
+
+<% include ../partials/footer %>

@@ -1,0 +1,28 @@
+body {
+   background-color: #151515;
+}
+
+#landing-header {
+   z-index: 1;
+   position: relative;
+   text-align: center;
+   padding-top: 25vh;
+   color: #fff;
+   text-shadow: 0 0 4px #151515;
+   letter-spacing: 1px;
+}
+
+h1 {
+   font-size: 5.4em;
+}
+
+#viewCGbutton {
+   z-index: 1;
+   position: relative;
+   text-align: center;
+   padding-top: 5vh;
+}
+
+.btn {
+   font-size: 1.3em;
+}

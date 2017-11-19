@@ -1,0 +1,238 @@
+body {
+  background: slategrey;
+  font-family: Open Sans, Segoe UI,sans-serif;
+  font-size: 20px;
+
+  -webkit-font-smoothing: antialiased;
+  /*text-rendering: optimizeLegibility;*/
+  /*font-feature-settings: normal;*/
+  font-variant-numeric: proportional-nums;
+}
+
+#edurateLogo {
+  position: relative;
+  margin-top: .4em;
+}
+
+#navBar {
+  font-size: 1em;
+}
+
+#navBar span {
+  color: rgb(0,180,90);
+  font-size: 1em;
+  font-weight: 600;
+}
+
+li {
+  list-style-type: none;
+}
+
+.navbar-brand {
+  display: inline;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.alert {
+/*  font-size: 1.1em;*/
+  color: rgb(47,47,47);
+}
+
+#bookIcon {
+  padding-right: 15px;
+}
+
+.jumbotron {
+  background-color: rgb(255,250,245);
+  text-indent: 12px;
+}
+
+.jumbotron h1 {
+  display: inline-block;
+  font-weight: 700;
+  color: rgb(5,65,115);
+  font-size: 3.6em;
+  position: absolute;
+  margin-top: .2em;
+}
+
+.jumbotron h3 {
+  letter-spacing: .85px;
+}
+
+/*workaround for safari flex-wrap bug*/
+.row:before { 
+  display: none;
+}
+
+/*removing class="row" from the <div> in the HTML that contains the thumbnails also works*/
+/*http://stackoverflow.com/questions/34250282/flexbox-safari-bug-flex-wrap*/
+
+#browse {
+  color: rgb(0, 240, 240);
+  font-size: 1em;
+}
+
+.thumbnail {
+  background-color: rgb(255, 255, 255);
+  padding: 0;
+  border-color: rgb(0, 40, 50);
+}
+
+#providerDescription{
+  font-size: .8em;
+}
+
+#addedBy{
+  font-size: .6em;
+}
+
+.thumbnail .caption-full {
+  padding: 0 20px 5px 24px;
+}
+
+#providerName {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+/*#score {
+  font-family: inconsolata, monaco, monospace;
+  font-size: 1.2em;
+}*/
+
+#avgRating {
+  position: relative;
+  margin-top: -.6em;
+}
+#numberUsers {
+  font-size: .7em;
+  color: rgb(97,97,97);
+  position: relative;
+  margin-top: -.6em;
+/*  padding-right: 6px;*/
+}
+
+#avgPercentage {
+  font-family: inconsolata, monaco, monospace;
+  color: rgb(92,184,92);
+  font-size: 2.2em;
+  font-weight: 700;
+}
+
+#addAReviewBlock p {
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+#addAReviewBlock p:hover {
+  background-color: rgb(36, 89, 87);
+  font-weight: 700;
+}
+
+#addAReviewText {
+  background-color: rgb(0, 160, 140);
+  padding: 6px 25px 6px 25px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+#reviewTitle {
+  font-weight: 700;
+  letter-spacing: .85px;
+}
+
+.well {
+  background-color: rgb(0, 77, 102);
+  color: rgb(255, 255, 255);
+  font-size: .8em;
+  line-height: 1.5em;
+  border-color: rgb(0, 40, 50);
+  padding: 18px 24px 0 24px;
+}
+
+#reviewText {
+  
+}
+
+#username {
+  font-family: inconsolata, monaco, monospace;
+  color: rgb(255,165,50);
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+#scoreline {
+  padding: 5px 5px;
+}
+
+#ratedIt {
+  color: rgb(190,190,190);
+  font-size: .8em;
+}
+
+#timestamp {
+  color: rgb(190,190,190);
+  font-size: .7em;
+/*  font-style: italic;*/
+}
+
+#usersRating {
+  font-family: inconsolata, monaco, monospace;
+  color: rgb(255,160,50);
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+#editDelete .delete-form input, submit {
+  background-color: rgb(0, 77, 102);
+  font-family: inconsolata, monaco, monospace;
+  font-size: 1em;
+  color: rgb(50,160,220);
+  border: none;
+}
+
+#editDelete .delete-form :hover {
+  background-color: rgb(200,50,50);
+  font-family: inconsolata, monaco, monospace;
+  font-size: 1em;
+  color: rgb(255,255,255);
+}
+
+.list-inline a {
+  font-family: inconsolata, monaco, monospace;
+  font-size: 1em;
+  color: rgb(50,160,220);
+}
+
+.list-inline a:hover {
+  font-family: inconsolata, monaco, monospace;
+  font-size: 1em;
+  color: rgb(255,255,255);
+  text-decoration: none;
+}
+
+hr {
+  border-bottom: 1px;
+  border-color: rgb(0, 40, 50);
+  margin-top: .5em;
+}
+
+#return {
+  color: rgb(0, 240, 240);
+}
+
+.list-group-item {
+  font-size: 1.1em;
+}
+
+.delete-form {
+  display: inline;
+}
+
+.copyright {
+  color: rgb(0, 240, 240);
+  text-align: center;
+  font-size: .8em;
+}

@@ -1,0 +1,12 @@
+<% include ./partials/header %>
+
+<h1>Login:</h1>
+<form action="/login" method="POST">
+	<input type="text" autofocus="autofocus" name="username" placeholder="enter your username">
+	<input type="password" name="password" placeholder="enter a password">
+	<input type="submit" value="Login">
+</form>
+<br />
+<p>You need to register to add a review. <a href ="/register">SIGN UP HERE.</a></p>
+
+<% include ./partials/footer %>
